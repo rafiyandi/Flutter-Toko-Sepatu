@@ -1,0 +1,4 @@
+#Mon Jan 03 17:47:16 ICT 2022
+base.0=D\:\\TUTORIAL\\Futter X Laravel\\KELAS LARAVEL X FLUTTER\\shamo\\shamo\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
