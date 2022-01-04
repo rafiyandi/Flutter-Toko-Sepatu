@@ -2,6 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:shamo/models/user_model.dart';
 import 'package:shamo/services/auth_service.dart';
 
+//NOTE: Proses pembuatan untuk provider yaitu, models, service provider, dan provider
 class AuthProvider with ChangeNotifier {
   UserModel _user;
 
