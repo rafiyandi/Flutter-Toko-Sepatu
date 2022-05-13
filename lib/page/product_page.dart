@@ -240,15 +240,13 @@ class _ProductPageState extends State<ProductPage> {
                 ),
                 Expanded(
                   child: Container(
-                    height: 54,
+                      height: 54,
                       child: TextButton(
                         onPressed: () {},
                         style: TextButton.styleFrom(
-                          backgroundColor: primaryColor,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12)
-                          )
-                        ),
+                            backgroundColor: primaryColor,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12))),
                         child: Text(
                           "Add to Cart",
                           style: primaryTextStyle.copyWith(

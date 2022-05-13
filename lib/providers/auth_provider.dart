@@ -1,8 +1,7 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 import 'package:shamo/models/user_model.dart';
 import 'package:shamo/services/auth_service.dart';
 
-//NOTE: Proses pembuatan untuk provider yaitu, models, service provider, dan provider
 class AuthProvider with ChangeNotifier {
   UserModel _user;
 
@@ -13,13 +12,20 @@ class AuthProvider with ChangeNotifier {
     notifyListeners();
   }
 
-  //funtion untuk menambahkan register
-
-  Future<bool> register(
-      {String name, String username, String email, String password}) async {
+  Future<bool> register({
+    String name,
+    String username,
+    String email,
+    String password,
+  }) async {
     try {
       UserModel user = await AuthService().register(
-          name: name, username: username, email: email, password: password);
+        name: name,
+        username: username,
+        email: email,
+        password: password,
+      );
+
       _user = user;
       return true;
     } catch (e) {
@@ -37,6 +43,7 @@ class AuthProvider with ChangeNotifier {
         email: email,
         password: password,
       );
+
       _user = user;
       return true;
     } catch (e) {

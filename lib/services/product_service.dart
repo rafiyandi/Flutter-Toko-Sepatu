@@ -1,13 +1,13 @@
 import 'dart:convert';
-import 'package:shamo/models/product_model.dart';
 import 'package:http/http.dart' as http;
+import 'package:shamo/models/product_model.dart';
 
 class ProductService {
-  String baseUrl = "http://10.115.168.49:8000/api";
+  String baseUrl = 'http://10.140.227.226:8000/api';
 
   Future<List<ProductModel>> getProducts() async {
-    var url = '$baseUrl/products';
-    var headers = {'Content-Type': 'aplication/json'};
+    final url = '$baseUrl/products';
+    var headers = {'Content-Type': 'application/json'};
 
     var response = await http.get(url, headers: headers);
 
@@ -20,9 +20,10 @@ class ProductService {
       for (var item in data) {
         products.add(ProductModel.fromJson(item));
       }
+
       return products;
     } else {
-      throw Exception('Gagal Get Product!');
+      throw Exception('Gagal Get Products!');
     }
   }
 }

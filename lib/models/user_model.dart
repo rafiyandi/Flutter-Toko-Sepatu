@@ -11,8 +11,8 @@ class UserModel {
     this.name,
     this.email,
     this.username,
-    this.token,
     this.profilePhotoUrl,
+    this.token,
   });
 
   UserModel.fromJson(Map<String, dynamic> json) {
@@ -23,7 +23,6 @@ class UserModel {
     profilePhotoUrl = json['profile_photo_url'];
     token = json['token'];
   }
-//mengubah ke Json
 
   Map<String, dynamic> toJson() {
     return {

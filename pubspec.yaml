@@ -33,6 +33,7 @@ dependencies:
   carousel_slider: ^3.0.0
   provider: ^4.3.3
   http: ^0.12.2
+  extended_image: ^2.0.0
 
 dev_dependencies:
   flutter_test:

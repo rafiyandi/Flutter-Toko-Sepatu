@@ -1,4 +1,4 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 import 'package:shamo/models/product_model.dart';
 import 'package:shamo/services/product_service.dart';
 
@@ -9,7 +9,6 @@ class ProductProvider with ChangeNotifier {
 
   set products(List<ProductModel> products) {
     _products = products;
-
     notifyListeners();
   }
 
