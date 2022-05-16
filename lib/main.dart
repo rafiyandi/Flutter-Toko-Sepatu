@@ -39,7 +39,6 @@ class _MyAppState extends State<MyApp> {
           "/home": (context) => MainPage(),
           "/detail-chat": (context) => DetailChatPage(),
           "/edit-profile": (context) => EditProfilePage(),
-          "/product": (context) => ProductPage(),
           "/cart": (context) => CartPage(),
           "/checkout": (context) => CheckoutPage(),
           "/checkout-succes": (context) => CheckoutSuccesPage(),

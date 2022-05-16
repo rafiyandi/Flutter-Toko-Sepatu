@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shamo/models/user_model.dart';
@@ -50,18 +51,42 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
 
-            //NOTE:DISINI PERUBAHAN
-            // Container(
+            // NOTE:DISINI PERUBAHAN
+            Container(
+              width: 54,
+              height: 54,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                image: DecorationImage(
+                  image: NetworkImage(
+                    user.profilePhotoUrl,
+                  ),
+                ),
+              ),
+            ),
+
+            // CachedNetworkImage(
+            //   imageUrl: user.profilePhotoUrl,
             //   width: 54,
             //   height: 54,
-            //   decoration: BoxDecoration(
-            //     shape: BoxShape.circle,
-            //     image: DecorationImage(
-            //       image: NetworkImage(
-            //         user.profilePhotoUrl,
-            //       ),
+            //   fit: BoxFit.contain,
+            // ),
+            // Image.network(
+            //   user.profilePhotoUrl,
+            //   width: 54,
+            //   height: 54,
+            //   fit: BoxFit.cover,
+            //   loadingBuilder: (context, i, k) => Container(
+            //     width: 54,
+            //     height: 54,
+            //     child: Center(
+            //       child: CircularProgressIndicator(),
             //     ),
             //   ),
+            //   errorBuilder: (ctx, e, n) {
+            //     print(e);
+            //     return Icon(Icons.error);
+            //   },
             // ),
           ],
         ),
@@ -217,10 +242,11 @@ class _HomePageState extends State<HomePage> {
               ),
               Row(
                 children: productProvider.products
-                    .map(
-                      (product) => ProductCard(product),
-                    )
-                    .toList(),
+                        .map(
+                          (product) => ProductCard(product),
+                        )
+                        .toList() ??
+                    [],
               ),
             ],
           ),
@@ -253,7 +279,7 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           children: productProvider.products
               .map(
-                (product) => ProductTile(),
+                (product) => ProductTile(product),
               )
               .toList(),
         ),

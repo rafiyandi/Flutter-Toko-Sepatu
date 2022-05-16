@@ -1,5 +1,7 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:shamo/models/product_model.dart';
 import 'package:shamo/models/user_model.dart';
 import 'package:shamo/providers/auth_provider.dart';
 import 'package:shamo/theme.dart';
@@ -19,11 +21,12 @@ class ProfilePage extends StatelessWidget {
           margin: EdgeInsets.all(defaultMargin),
           child: Row(
             children: [
-              ClipOval(
-                  child: Image.network(
-                user.profilePhotoUrl,
-                width: 64,
-              )),
+              // ClipOval(
+              //     child: Image.network(
+              //   user.profilePhotoUrl,
+              //   width: 64,
+              // )),
+
               SizedBox(
                 width: 16,
               ),

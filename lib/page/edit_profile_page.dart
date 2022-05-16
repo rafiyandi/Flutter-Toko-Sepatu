@@ -76,16 +76,16 @@ class EditProfilePage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
-              margin: EdgeInsets.only(top: 30),
-              width: 100,
-              height: 100,
-              decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  image: DecorationImage(
-                      fit: BoxFit.fill,
-                      image: NetworkImage(user.profilePhotoUrl))),
-            ),
+            // Container(
+            //   margin: EdgeInsets.only(top: 30),
+            //   width: 100,
+            //   height: 100,
+            //   decoration: BoxDecoration(
+            //       shape: BoxShape.circle,
+            //       image: DecorationImage(
+            //           fit: BoxFit.fill,
+            //           image: NetworkImage(user.profilePhotoUrl))),
+            // ),
             nameInput(),
             usernameInput(),
             emailInput(),
