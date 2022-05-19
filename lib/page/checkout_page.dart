@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:shamo/providers/cart_provider.dart';
 import 'package:shamo/theme.dart';
+import 'package:shamo/widgets/cart_card.dart';
 import 'package:shamo/widgets/checkout_card.dart';
 
 class CheckoutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    CartProvider cartProvider = Provider.of<CartProvider>(context);
+
     Widget content() {
       return ListView(
         padding: EdgeInsets.symmetric(horizontal: defaultMargin),
@@ -20,8 +25,13 @@ class CheckoutPage extends StatelessWidget {
                   style: primaryTextStyle.copyWith(
                       fontSize: 16, fontWeight: medium),
                 ),
-                CheckoutCard(),
-                CheckoutCard(),
+                Column(
+                  children: cartProvider.carts
+                      .map(
+                        (cart) => CheckoutCard(cart),
+                      )
+                      .toList(),
+                )
               ],
             ),
           ),
@@ -122,7 +132,7 @@ class CheckoutPage extends StatelessWidget {
                       style: secondaryTextStyle.copyWith(fontSize: 12),
                     ),
                     Text(
-                      "2 Items",
+                      cartProvider.totalItems().toString() + " Items",
                       style: primaryTextStyle.copyWith(fontWeight: medium),
                     )
                   ],
@@ -138,7 +148,7 @@ class CheckoutPage extends StatelessWidget {
                       style: secondaryTextStyle.copyWith(fontSize: 12),
                     ),
                     Text(
-                      "\$575.96",
+                      "\$${cartProvider.totalPrice()}",
                       style: primaryTextStyle.copyWith(fontWeight: medium),
                     )
                   ],
@@ -154,7 +164,7 @@ class CheckoutPage extends StatelessWidget {
                       style: secondaryTextStyle.copyWith(fontSize: 12),
                     ),
                     Text(
-                      "2 ItemsFree",
+                      "Free",
                       style: primaryTextStyle.copyWith(fontWeight: medium),
                     )
                   ],
@@ -177,7 +187,7 @@ class CheckoutPage extends StatelessWidget {
                       style: priceTextStyle.copyWith(fontWeight: semiBold),
                     ),
                     Text(
-                      "\$575.92",
+                      "\$${cartProvider.totalPrice()}",
                       style: priceTextStyle.copyWith(fontWeight: semiBold),
                     )
                   ],
