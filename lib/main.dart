@@ -11,6 +11,7 @@ import 'package:shamo/page/sign_in_page.dart';
 import 'package:shamo/page/sign_up_page.dart';
 import 'package:shamo/page/splash_page.dart';
 import 'package:shamo/providers/auth_provider.dart';
+import 'package:shamo/providers/cart_provider.dart';
 import 'package:shamo/providers/product_provider.dart';
 import 'package:shamo/providers/wishlist_provider.dart';
 
@@ -30,7 +31,8 @@ class _MyAppState extends State<MyApp> {
       providers: [
         ChangeNotifierProvider(create: (context) => AuthProvider()),
         ChangeNotifierProvider(create: (context) => ProductProvider()),
-        ChangeNotifierProvider(create: (context) => WishlistProvider())
+        ChangeNotifierProvider(create: (context) => WishlistProvider()),
+        ChangeNotifierProvider(create: (context) => CartProvider()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
