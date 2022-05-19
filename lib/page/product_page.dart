@@ -30,7 +30,7 @@ class _ProductPageState extends State<ProductPage> {
   ];
 
   int currentIndex = 0;
-  bool isWishlist = false;
+  // bool isWishlist = false;
 
   @override
   Widget build(BuildContext context) {
@@ -212,30 +212,31 @@ class _ProductPageState extends State<ProductPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   //
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        widget.product.name,
-                        style: primaryTextStyle.copyWith(
-                            fontSize: 18, fontWeight: semiBold),
-                      ),
-                      Text(
-                        widget.product.category.name,
-                        style: secondaryTextStyle.copyWith(fontSize: 12),
-                      )
-                    ],
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          widget.product.name,
+                          style: primaryTextStyle.copyWith(
+                              fontSize: 18, fontWeight: semiBold),
+                        ),
+                        Text(
+                          widget.product.category.name,
+                          style: secondaryTextStyle.copyWith(fontSize: 12),
+                        )
+                      ],
+                    ),
                   ),
 
                   GestureDetector(
                     onTap: () {
-                      setState(() {
-                        isWishlist = !isWishlist;
-                      });
-                      // wishlistProvider.setProduct(widget.product);
-                      //wishlistProvider.isWishlist(widget.product)
+                      // setState(() {
+                      //   isWishlist = !isWishlist;
+                      // });
+                      wishlistProvider.setProduct(widget.product);
 
-                      if (isWishlist) {
+                      if (wishlistProvider.isWishlist(widget.product)) {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
                             backgroundColor: secondaryColor,
@@ -258,9 +259,9 @@ class _ProductPageState extends State<ProductPage> {
                       }
                     },
                     child: Image.asset(
-                      // wishlistProvider.isWishlist(widget.product)
+                      wishlistProvider.isWishlist(widget.product)
 
-                      isWishlist
+                          // isWishlist
                           ? 'assets/button_wishlist_blue.png'
                           : 'assets/button_wishlist.png',
                       width: 46,

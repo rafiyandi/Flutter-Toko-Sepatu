@@ -11,6 +11,8 @@ class WishlistProvider with ChangeNotifier {
     notifyListeners();
   }
 
+  //menambahkan kedalam wishlish
+
   setProduct(ProductModel product) {
     if (!isWishlist(product)) {
       _wishlist.add(product);
@@ -26,7 +28,7 @@ class WishlistProvider with ChangeNotifier {
     if (_wishlist.indexWhere((element) => element.id == product.id) == -1) {
       return false;
     } else {
-      true;
+      return true;
     }
   }
 }

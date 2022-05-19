@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:shamo/providers/wishlist_provider.dart';
 import 'package:shamo/theme.dart';
 import 'package:shamo/widgets/wishlist_card.dart';
 
 class WishListPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    WishlistProvider wishlistProvider = Provider.of<WishlistProvider>(context);
+
     Widget header() {
       return AppBar(
         backgroundColor: backgroundColor1,
@@ -59,7 +63,8 @@ class WishListPage extends StatelessWidget {
                   ),
                   style: TextButton.styleFrom(
                       backgroundColor: primaryColor,
-                      padding: EdgeInsets.symmetric(vertical: 10, horizontal: 24),
+                      padding:
+                          EdgeInsets.symmetric(vertical: 10, horizontal: 24),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(12))),
                 ),
@@ -70,29 +75,29 @@ class WishListPage extends StatelessWidget {
       );
     }
 
-    Widget content(){
+    Widget content() {
       return Expanded(
         child: Container(
           color: backgroundColor3,
           child: ListView(
-            padding: EdgeInsets.symmetric(horizontal: defaultMargin)
-            ,children: [
+            padding: EdgeInsets.symmetric(horizontal: defaultMargin),
+            children: [
               Column(
-                children: [
-                  WishListCard(),
-                  WishListCard(),
-                  WishListCard(),
-                ],
+                children: wishlistProvider.wishlist
+                    .map((product) => WishListCard(product))
+                    .toList(),
               )
-          ],),
+            ],
+          ),
         ),
       );
     }
+
     return Column(
       children: [
         header(),
         // emptyWishlist(),
-        content(),
+        wishlistProvider.wishlist.length == 0 ? emptyWishlist() : content(),
       ],
     );
   }
