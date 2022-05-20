@@ -1,14 +1,42 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:shamo/providers/auth_provider.dart';
 import 'package:shamo/providers/cart_provider.dart';
+import 'package:shamo/providers/transaction_provider.dart';
 import 'package:shamo/theme.dart';
 import 'package:shamo/widgets/cart_card.dart';
 import 'package:shamo/widgets/checkout_card.dart';
+import 'package:shamo/widgets/loading_button.dart';
 
-class CheckoutPage extends StatelessWidget {
+class CheckoutPage extends StatefulWidget {
+  @override
+  State<CheckoutPage> createState() => _CheckoutPageState();
+}
+
+class _CheckoutPageState extends State<CheckoutPage> {
+  bool isLoading = false;
   @override
   Widget build(BuildContext context) {
     CartProvider cartProvider = Provider.of<CartProvider>(context);
+    TransactionProvider transactionProvider =
+        Provider.of<TransactionProvider>(context);
+    AuthProvider authProvider = Provider.of<AuthProvider>(context);
+
+    handleCheckout() async {
+      setState(() {
+        isLoading = true;
+      });
+      if (await transactionProvider.checkout(authProvider.user.token,
+          cartProvider.carts, cartProvider.totalPrice())) {
+        //jika kosong maka kita akan menambahkan clear
+        cartProvider.carts = [];
+        Navigator.pushNamedAndRemoveUntil(
+            context, '/checkout-succes', (route) => false);
+      }
+      setState(() {
+        isLoading = false;
+      });
+    }
 
     Widget content() {
       return ListView(
@@ -204,26 +232,26 @@ class CheckoutPage extends StatelessWidget {
             color: Color(0xff2E3141),
           ),
 
-          Container(
-              margin: EdgeInsets.symmetric(vertical: defaultMargin),
-              height: 50,
-              width: double.infinity,
-              child: TextButton(
-                  onPressed: () {
-                    Navigator.pushNamedAndRemoveUntil(
-                        context, "/checkout-succes", (route) => false);
-                  },
-                  style: TextButton.styleFrom(
-                    backgroundColor: primaryColor,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                  ),
-                  child: Text(
-                    "Checkout Now",
-                    style: primaryTextStyle.copyWith(
-                        fontSize: 16, fontWeight: semiBold),
-                  ))),
+          isLoading
+              ? Container(
+                  margin: EdgeInsets.only(bottom: 30), child: LoadingButton())
+              : Container(
+                  margin: EdgeInsets.symmetric(vertical: defaultMargin),
+                  height: 50,
+                  width: double.infinity,
+                  child: TextButton(
+                      onPressed: handleCheckout,
+                      style: TextButton.styleFrom(
+                        backgroundColor: primaryColor,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                      ),
+                      child: Text(
+                        "Checkout Now",
+                        style: primaryTextStyle.copyWith(
+                            fontSize: 16, fontWeight: semiBold),
+                      ))),
         ],
       );
     }

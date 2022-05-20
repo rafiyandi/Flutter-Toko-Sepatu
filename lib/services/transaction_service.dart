@@ -23,11 +23,7 @@ class TransactionService {
       'shipping_price': 0,
     });
 
-    var response = await http.post({
-      'url': url,
-      'headers': header,
-      'body': body,
-    });
+    var response = await http.post(url, headers: header, body: body);
     print("Ini Response " + response.body);
 
     if (response.statusCode == 200) {

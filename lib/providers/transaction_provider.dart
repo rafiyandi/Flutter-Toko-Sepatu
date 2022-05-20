@@ -13,7 +13,7 @@ class TransactionProvider with ChangeNotifier {
       }
     } catch (e) {
       print(e);
-      throw Exception('Gagal Melakukan Checkout!');
+      return false;
     }
   }
 }
