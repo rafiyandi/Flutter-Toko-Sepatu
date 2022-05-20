@@ -214,9 +214,11 @@ class CheckoutPage extends StatelessWidget {
                         context, "/checkout-succes", (route) => false);
                   },
                   style: TextButton.styleFrom(
-                      backgroundColor: primaryColor,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12))),
+                    backgroundColor: primaryColor,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  ),
                   child: Text(
                     "Checkout Now",
                     style: primaryTextStyle.copyWith(
