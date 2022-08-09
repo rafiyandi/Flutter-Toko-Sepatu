@@ -4,7 +4,24 @@
             "outputFile": "D:\\TUTORIAL\\Futter X Laravel\\KELAS LARAVEL X FLUTTER\\shamo\\shamo\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-pl\\values-pl.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Ar Razzaaq\\.gradle\\caches\\transforms-3\\0eeed1602b5efdb414021b898fac3b52\\transformed\\core-1.6.0\\res\\values-pl\\values-pl.xml",
+                    "source": "C:\\Users\\Ar Razzaaq\\.gradle\\caches\\transforms-3\\dc6fd53c220f03bdc6813e680c692ecf\\transformed\\jetified-play-services-basement-18.0.0\\res\\values-pl\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "195",
+                        "endColumns": "135",
+                        "endOffsets": "330"
+                    },
+                    "to": {
+                        "startLines": "10",
+                        "startColumns": "4",
+                        "startOffsets": "1045",
+                        "endColumns": "139",
+                        "endOffsets": "1180"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Ar Razzaaq\\.gradle\\caches\\transforms-3\\5ae3f8bdc7d78078628e4e13215c7aad\\transformed\\core-1.6.0\\res\\values-pl\\values-pl.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Ar Razzaaq\\.gradle\\caches\\transforms-3\\d262b9d64d1cfd80014853e9a787ea93\\transformed\\jetified-play-services-base-18.0.1\\res\\values-pl\\values.xml",
+                    "source": "C:\\Users\\Ar Razzaaq\\.gradle\\caches\\transforms-3\\a3364b3a9944aa26d2923ef5b2ec4fd5\\transformed\\jetified-play-services-base-18.0.1\\res\\values-pl\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -35,23 +52,6 @@
                         "startOffsets": "55,159,327,449,559,710,835,946,1185,1356,1465,1640,1768,1927,2088,2157,2223",
                         "endColumns": "103,167,121,109,150,124,110,98,170,108,174,127,158,160,68,65,83",
                         "endOffsets": "154,322,444,554,705,830,941,1040,1351,1460,1635,1763,1922,2083,2152,2218,2302"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Ar Razzaaq\\.gradle\\caches\\transforms-3\\de72572f35c2ace68f582d7ea9461546\\transformed\\jetified-play-services-basement-18.0.0\\res\\values-pl\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "195",
-                        "endColumns": "135",
-                        "endOffsets": "330"
-                    },
-                    "to": {
-                        "startLines": "10",
-                        "startColumns": "4",
-                        "startOffsets": "1045",
-                        "endColumns": "139",
-                        "endOffsets": "1180"
                     }
                 }
             ]

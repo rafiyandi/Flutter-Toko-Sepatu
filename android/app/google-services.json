@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "912758521795",
-    "project_id": "shamo-a0999",
-    "storage_bucket": "shamo-a0999.appspot.com"
+    "project_number": "401092655298",
+    "project_id": "tokosepatu-df454",
+    "storage_bucket": "tokosepatu-df454.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:912758521795:android:cbb9c17a51a7c9b2cac776",
+        "mobilesdk_app_id": "1:401092655298:android:a315a1fd7712eb2e7be35b",
         "android_client_info": {
           "package_name": "com.rafi.shamo"
         }
       },
       "oauth_client": [
         {
-          "client_id": "912758521795-gdqucpdsa3r9d2ub4a90hpcf6vplb0ed.apps.googleusercontent.com",
+          "client_id": "401092655298-2gptbssetlg01eruhm6tbadv8vnsp1p3.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB18dy6B04TgQiVDCYfnej1HC1qhv3Dys4"
+          "current_key": "AIzaSyD-VOLXbJn1K_KB7cal-d5whYTkDLYWjMY"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "912758521795-gdqucpdsa3r9d2ub4a90hpcf6vplb0ed.apps.googleusercontent.com",
+              "client_id": "401092655298-2gptbssetlg01eruhm6tbadv8vnsp1p3.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

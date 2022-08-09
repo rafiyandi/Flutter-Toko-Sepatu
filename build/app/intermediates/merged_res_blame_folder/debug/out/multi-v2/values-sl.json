@@ -4,7 +4,7 @@
             "outputFile": "D:\\TUTORIAL\\Futter X Laravel\\KELAS LARAVEL X FLUTTER\\shamo\\shamo\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sl\\values-sl.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Ar Razzaaq\\.gradle\\caches\\transforms-3\\de72572f35c2ace68f582d7ea9461546\\transformed\\jetified-play-services-basement-18.0.0\\res\\values-sl\\values.xml",
+                    "source": "C:\\Users\\Ar Razzaaq\\.gradle\\caches\\transforms-3\\dc6fd53c220f03bdc6813e680c692ecf\\transformed\\jetified-play-services-basement-18.0.0\\res\\values-sl\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -21,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Ar Razzaaq\\.gradle\\caches\\transforms-3\\0eeed1602b5efdb414021b898fac3b52\\transformed\\core-1.6.0\\res\\values-sl\\values-sl.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "20",
-                        "startColumns": "4",
-                        "startOffsets": "2279",
-                        "endColumns": "100",
-                        "endOffsets": "2375"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Ar Razzaaq\\.gradle\\caches\\transforms-3\\d262b9d64d1cfd80014853e9a787ea93\\transformed\\jetified-play-services-base-18.0.1\\res\\values-sl\\values.xml",
+                    "source": "C:\\Users\\Ar Razzaaq\\.gradle\\caches\\transforms-3\\a3364b3a9944aa26d2923ef5b2ec4fd5\\transformed\\jetified-play-services-base-18.0.1\\res\\values-sl\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -52,6 +35,23 @@
                         "startOffsets": "55,161,326,455,562,709,839,953,1197,1355,1462,1629,1759,1911,2063,2133,2195",
                         "endColumns": "105,164,128,106,146,129,113,103,157,106,166,129,151,151,69,61,83",
                         "endOffsets": "156,321,450,557,704,834,948,1052,1350,1457,1624,1754,1906,2058,2128,2190,2274"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Ar Razzaaq\\.gradle\\caches\\transforms-3\\5ae3f8bdc7d78078628e4e13215c7aad\\transformed\\core-1.6.0\\res\\values-sl\\values-sl.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "20",
+                        "startColumns": "4",
+                        "startOffsets": "2279",
+                        "endColumns": "100",
+                        "endOffsets": "2375"
                     }
                 }
             ]
