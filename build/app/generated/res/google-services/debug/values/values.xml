@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">912758521795-gdqucpdsa3r9d2ub4a90hpcf6vplb0ed.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">912758521795</string>
+    <string name="google_api_key" translatable="false">AIzaSyB18dy6B04TgQiVDCYfnej1HC1qhv3Dys4</string>
+    <string name="google_app_id" translatable="false">1:912758521795:android:cbb9c17a51a7c9b2cac776</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyB18dy6B04TgQiVDCYfnej1HC1qhv3Dys4</string>
+    <string name="google_storage_bucket" translatable="false">shamo-a0999.appspot.com</string>
+    <string name="project_id" translatable="false">shamo-a0999</string>
+</resources>

@@ -4,7 +4,7 @@
     "type": "COMPATIBLE_SCREEN_MANIFEST",
     "kind": "Directory"
   },
-  "applicationId": "com.example.shamo",
+  "applicationId": "com.rafi.shamo",
   "variantName": "debug",
   "elements": []
 }
