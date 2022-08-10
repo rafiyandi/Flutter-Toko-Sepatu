@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shamo/models/product_model.dart';
+import 'package:shamo/page/detail_chat_page.dart';
 import 'package:shamo/providers/cart_provider.dart';
 import 'package:shamo/providers/wishlist_provider.dart';
 import 'package:shamo/theme.dart';
@@ -150,7 +151,11 @@ class _ProductPageState extends State<ProductPage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Icon(Icons.chevron_left),
+                GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: Icon(Icons.chevron_left)),
                 Icon(
                   Icons.shopping_bag,
                   color: backgroundColor1,
@@ -360,12 +365,21 @@ class _ProductPageState extends State<ProductPage> {
               width: double.infinity,
               child: Row(
                 children: [
-                  Container(
-                    height: 54,
-                    width: 54,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage("assets/button_chat.png")),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  DetailChatPage(widget.product)));
+                    },
+                    child: Container(
+                      height: 54,
+                      width: 54,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage("assets/button_chat.png")),
+                      ),
                     ),
                   ),
                   SizedBox(
